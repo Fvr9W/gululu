@@ -8,13 +8,13 @@
     "The Windows executable is unsigned (no Authenticode); integrity is protected by this per-version pinned SHA-256, verified at install time.",
     "apply_patch is a structured patch applier: it reads, writes, moves, and deletes files in the working directory. Review the patch content it is given."
   ],
-  "url": {
-    "64bit": "https://github.com/BeautyyuYanli/codex-apply-patch/releases/download/rust-v0.147.0/apply-patch-rust-v0.147.0-x86_64-pc-windows-msvc.zip"
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/BeautyyuYanli/codex-apply-patch/releases/download/rust-v0.147.0/apply-patch-rust-v0.147.0-x86_64-pc-windows-msvc.zip",
+      "hash": "b315bb0b3ac54f34222149d2799f75e90688b70db33a80a0a4b0ae742fbc8dcd",
+      "extract_dir": "apply-patch"
+    }
   },
-  "hash": {
-    "64bit": "b315bb0b3ac54f34222149d2799f75e90688b70db33a80a0a4b0ae742fbc8dcd"
-  },
-  "extract_dir": "apply-patch",
   "bin": "apply_patch.exe",
   "checkver": {
     "github": "https://api.github.com/repos/BeautyyuYanli/codex-apply-patch/releases",
@@ -24,11 +24,11 @@
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "url": "https://github.com/BeautyyuYanli/codex-apply-patch/releases/download/rust-v$version/apply-patch-rust-v$version-x86_64-pc-windows-msvc.zip"
+        "url": "https://github.com/BeautyyuYanli/codex-apply-patch/releases/download/rust-v$version/apply-patch-rust-v$version-x86_64-pc-windows-msvc.zip",
+        "hash": {
+          "url": "$baseurl/apply-patch-rust-v$version-x86_64-pc-windows-msvc.zip.sha256"
+        }
       }
-    },
-    "hash": {
-      "url": "$baseurl/apply-patch-rust-v$version-x86_64-pc-windows-msvc.zip.sha256"
     }
   }
 }
