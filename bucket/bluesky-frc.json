@@ -1,0 +1,25 @@
+{
+  "version": "5.2.1",
+  "description": "Bluesky Frame Rate Converter (FRC) - GPU-accelerated frame rate conversion for real-time video playback, installed as DirectShow filters.",
+  "homepage": "https://bluesky-soft.com/en/BlueskyFRC.html",
+  "license": "Freeware",
+  "notes": [
+    "This package is a DirectShow filter pair (BlueskyFRC32.dll / BlueskyFRC64.dll), not a standalone application. After installing, run BlueskyFRCUtil.exe once as administrator to register the filters, then use them from a DirectShow-capable media player.",
+    "The official server serves the ZIP only to a request whose Referer is the product page's bfrc/download/?vs=...&tp=p&hs=... URL; a plain request returns 404. To install, configure Scoop's private_hosts for bluesky-soft.com (match the download URL, set the Referer header to that URL) and run 'scoop config aria2-enabled false' so the built-in downloader is used. See the bluesky-frc receipt in docs/plans/active/add-bluesky-frc/ for the exact configuration.",
+    "Upstream lists Microsoft .NET Framework 4.8.1 and Visual C++ runtimes (x86/x64) as runtime requirements."
+  ],
+  "url": "https://bluesky-soft.com/common/app/release/bfrc/BlueskyFRC_5.2.1.zip",
+  "hash": "60143819688F1BDDB4FB13347B478687A232BF2C1810C4CC52C34775A7CED94D",
+  "bin": "BlueskyFRCUtil.exe",
+  "checkver": {
+    "url": "https://bluesky-soft.com/en/BlueskyFRC.html",
+    "regex": "bfrc/download/\\?vs=(\\d+\\.\\d+\\.\\d+)&tp=p&hs=[0-9A-F]{64}"
+  },
+  "autoupdate": {
+    "url": "https://bluesky-soft.com/common/app/release/bfrc/BlueskyFRC_$version.zip",
+    "hash": {
+      "url": "https://bluesky-soft.com/en/BlueskyFRC.html",
+      "regex": "bfrc/download/\\?vs=$version&tp=p&hs=([0-9A-F]{64})"
+    }
+  }
+}

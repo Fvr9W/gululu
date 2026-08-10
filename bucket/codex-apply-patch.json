@@ -1,0 +1,34 @@
+{
+  "version": "0.147.0",
+  "description": "Standalone apply_patch utility from OpenAI Codex's agent patch system, mirrored as a ready-to-install binary bundle.",
+  "homepage": "https://github.com/BeautyyuYanli/codex-apply-patch",
+  "license": "Apache-2.0",
+  "notes": [
+    "Unofficial community mirror of OpenAI Codex's apply_patch binary, published by a third-party maintainer (BeautyyuYanli) and rebuilt automatically from upstream openai/codex releases.",
+    "The Windows executable is unsigned (no Authenticode); integrity is protected by this per-version pinned SHA-256, verified at install time.",
+    "apply_patch is a structured patch applier: it reads, writes, moves, and deletes files in the working directory. Review the patch content it is given."
+  ],
+  "url": {
+    "64bit": "https://github.com/BeautyyuYanli/codex-apply-patch/releases/download/rust-v0.147.0/apply-patch-rust-v0.147.0-x86_64-pc-windows-msvc.zip"
+  },
+  "hash": {
+    "64bit": "b315bb0b3ac54f34222149d2799f75e90688b70db33a80a0a4b0ae742fbc8dcd"
+  },
+  "extract_dir": "apply-patch",
+  "bin": "apply_patch.exe",
+  "checkver": {
+    "github": "https://api.github.com/repos/BeautyyuYanli/codex-apply-patch/releases",
+    "jsonpath": "$..tag_name",
+    "regex": "rust-v(\\d+\\.\\d+\\.\\d+)(?![^\\d]*alpha|[^\\d]*beta|[^\\d]*rc|[^\\d]*preview)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/BeautyyuYanli/codex-apply-patch/releases/download/rust-v$version/apply-patch-rust-v$version-x86_64-pc-windows-msvc.zip"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/apply-patch-rust-v$version-x86_64-pc-windows-msvc.zip.sha256"
+    }
+  }
+}

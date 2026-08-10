@@ -1,0 +1,54 @@
+{
+  "version": "1.14.3",
+  "description": "Standalone CLIProxyAPI usage tracker with SQLite persistence and a built-in dashboard.",
+  "homepage": "https://github.com/Willxup/cpa-usage-keeper",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v1.14.3/cpa-usage-keeper_v1.14.3_windows_amd64.zip",
+      "hash": "84a5a879d2ae3eccbb96583b66b96adc2c42eff62d387537255d4e55d50bd55a",
+      "extract_dir": "cpa-usage-keeper_v1.14.3_windows_amd64"
+    },
+    "arm64": {
+      "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v1.14.3/cpa-usage-keeper_v1.14.3_windows_arm64.zip",
+      "hash": "08494e62fb26a6847721a99ff669da51dd5f1fd1f4c50e7858ad51028e958f75",
+      "extract_dir": "cpa-usage-keeper_v1.14.3_windows_arm64"
+    }
+  },
+  "bin": "cpa-usage-keeper.exe",
+  "persist": [
+    "data",
+    ".env"
+  ],
+  "notes": [
+    "Copy .env.example to .env and set CPA_BASE_URL, CPA_MANAGEMENT_KEY, and a private LOGIN_PASSWORD before starting; authentication is enabled by default.",
+    "The persisted .env file contains CPA credentials and the login password. Protect it as a secret, and use AUTH_ENABLED=false only in an isolated deployment.",
+    "WORK_DIR defaults to ./data, which stores app.db, logs, and backups; the data directory is persisted by this manifest.",
+    "The SQLite database and unencrypted backups can contain original CPA credential data; restrict access to the installation and persisted data directories."
+  ],
+  "checkver": {
+    "github": "https://api.github.com/repos/Willxup/cpa-usage-keeper/releases",
+    "jsonpath": "$..tag_name",
+    "regex": "v(\\d+\\.\\d+\\.\\d+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v$version/cpa-usage-keeper_v$version_windows_amd64.zip",
+        "hash": {
+          "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v$version/checksums.txt",
+          "regex": "([0-9a-fA-F]{64})\\s+cpa-usage-keeper_v$version_windows_amd64\\.zip"
+        },
+        "extract_dir": "cpa-usage-keeper_v$version_windows_amd64"
+      },
+      "arm64": {
+        "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v$version/cpa-usage-keeper_v$version_windows_arm64.zip",
+        "hash": {
+          "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v$version/checksums.txt",
+          "regex": "([0-9a-fA-F]{64})\\s+cpa-usage-keeper_v$version_windows_arm64\\.zip"
+        },
+        "extract_dir": "cpa-usage-keeper_v$version_windows_arm64"
+      }
+    }
+  }
+}
