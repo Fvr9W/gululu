@@ -1,12 +1,12 @@
 {
   "version": "0.147.0",
-  "description": "Standalone apply_patch utility from OpenAI Codex's agent patch system, mirrored as a ready-to-install binary bundle.",
+  "description": "来自 OpenAI Codex 代理补丁系统的独立 apply_patch 工具，由第三方维护者以可直接安装的二进制包形式发布。",
   "homepage": "https://github.com/BeautyyuYanli/codex-apply-patch",
   "license": "Apache-2.0",
   "notes": [
-    "Unofficial community mirror of OpenAI Codex's apply_patch binary, published by a third-party maintainer (BeautyyuYanli) and rebuilt automatically from upstream openai/codex releases.",
-    "The Windows executable is unsigned (no Authenticode); integrity is protected by this per-version pinned SHA-256, verified at install time.",
-    "apply_patch is a structured patch applier: it reads, writes, moves, and deletes files in the working directory. Review the patch content it is given."
+    "这是由第三方维护者 BeautyyuYanli 发布的非官方 OpenAI Codex apply_patch 镜像，按照 openai/codex 的版本自动重建。",
+    "Windows 可执行文件未签名（无 Authenticode）；安装时通过每个版本固定的 SHA-256 校验完整性。",
+    "apply_patch 是结构化补丁应用工具，会在工作目录中读取、写入、移动和删除文件。请先审查它收到的补丁内容。"
   ],
   "architecture": {
     "64bit": {

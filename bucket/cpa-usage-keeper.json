@@ -1,6 +1,6 @@
 {
   "version": "1.14.3",
-  "description": "Standalone CLIProxyAPI usage tracker with SQLite persistence and a built-in dashboard.",
+  "description": "独立的 CLIProxyAPI 用量追踪工具，使用 SQLite 持久化并提供内置仪表板。",
   "homepage": "https://github.com/Willxup/cpa-usage-keeper",
   "license": "MIT",
   "architecture": {
@@ -21,10 +21,10 @@
     ".env"
   ],
   "notes": [
-    "Copy .env.example to .env and set CPA_BASE_URL, CPA_MANAGEMENT_KEY, and a private LOGIN_PASSWORD before starting; authentication is enabled by default.",
-    "The persisted .env file contains CPA credentials and the login password. Protect it as a secret, and use AUTH_ENABLED=false only in an isolated deployment.",
-    "WORK_DIR defaults to ./data, which stores app.db, logs, and backups; the data directory is persisted by this manifest.",
-    "The SQLite database and unencrypted backups can contain original CPA credential data; restrict access to the installation and persisted data directories."
+    "启动前请将 .env.example 复制为 .env，并设置 CPA_BASE_URL、CPA_MANAGEMENT_KEY 和私有 LOGIN_PASSWORD；默认启用身份验证。",
+    "持久化的 .env 文件包含 CPA 凭据和登录密码，请按机密信息保护；仅在隔离部署中使用 AUTH_ENABLED=false。",
+    "WORK_DIR 默认为 ./data，其中保存 app.db、日志和备份；此 manifest 会持久化 data 目录。",
+    "SQLite 数据库和未加密备份可能包含原始 CPA 凭据数据，请限制安装目录和持久化数据目录的访问权限。"
   ],
   "checkver": {
     "github": "https://api.github.com/repos/Willxup/cpa-usage-keeper/releases",
