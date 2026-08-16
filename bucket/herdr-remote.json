@@ -1,0 +1,26 @@
+{
+  "version": "0.7.3",
+  "description": "Windows relay and web/TUI dashboard for herdr agents.",
+  "homepage": "https://github.com/dcolinmorgan/herdr-remote",
+  "license": {
+    "identifier": "AGPL-3.0-or-later",
+    "url": "https://github.com/dcolinmorgan/herdr-remote/blob/v0.7.3/LICENSE"
+  },
+  "url": "https://github.com/dcolinmorgan/herdr-remote/archive/refs/tags/v0.7.3.zip",
+  "hash": "1137fb496e75fbf34ade20677d6ae72603c168b86f58f78cd6229f8f66dcf113",
+  "extract_dir": "herdr-remote-0.7.3",
+  "bin": [
+    [
+      "relay/start.ps1",
+      "herdr-remote"
+    ]
+  ],
+  "depends": [
+    "uv"
+  ],
+  "notes": [
+    "Windows relay only; install herdr 0.7+ separately.",
+    "Run herdr plugin link (scoop prefix herdr-remote) before starting the relay.",
+    "cloudflared is optional; set HERDR_RELAY_TOKEN before tunnel or non-loopback binding."
+  ]
+}
