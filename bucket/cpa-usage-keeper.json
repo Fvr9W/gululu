@@ -1,18 +1,18 @@
 {
-  "version": "1.14.3",
+  "version": "1.14.4",
   "description": "独立的 CLIProxyAPI 用量追踪工具，使用 SQLite 持久化并提供内置仪表板。",
   "homepage": "https://github.com/Willxup/cpa-usage-keeper",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v1.14.3/cpa-usage-keeper_v1.14.3_windows_amd64.zip",
-      "hash": "84a5a879d2ae3eccbb96583b66b96adc2c42eff62d387537255d4e55d50bd55a",
-      "extract_dir": "cpa-usage-keeper_v1.14.3_windows_amd64"
+      "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v1.14.4/cpa-usage-keeper_v1.14.4_windows_amd64.zip",
+      "hash": "0f1988dfc85c56a5c210502bee8446f142f5a1406d3002ad93021da1f83e8ceb",
+      "extract_dir": "cpa-usage-keeper_v1.14.4_windows_amd64"
     },
     "arm64": {
-      "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v1.14.3/cpa-usage-keeper_v1.14.3_windows_arm64.zip",
-      "hash": "08494e62fb26a6847721a99ff669da51dd5f1fd1f4c50e7858ad51028e958f75",
-      "extract_dir": "cpa-usage-keeper_v1.14.3_windows_arm64"
+      "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v1.14.4/cpa-usage-keeper_v1.14.4_windows_arm64.zip",
+      "hash": "dac8807d7d87cacba06e9bc90a2b363bf70535da1ca04d43f8a45efefe3be613",
+      "extract_dir": "cpa-usage-keeper_v1.14.4_windows_arm64"
     }
   },
   "bin": "cpa-usage-keeper.exe",
