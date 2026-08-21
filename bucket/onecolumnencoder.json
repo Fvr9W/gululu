@@ -1,16 +1,16 @@
 {
-  "version": "1008",
+  "version": "1049",
   "description": "OneColumnEncoder 视频编码工具，提供 AVC、HEVC 和 AV1 的 Windows 图形界面编码工作流。",
   "homepage": "https://github.com/iAvoe/OneColumnEncoder",
   "license": "Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/iAvoe/OneColumnEncoder/releases/download/Commit1008/1cenc-win-x64.7z",
-      "hash": "4d49eb4cb93d81a7cec83ce49e4295f008da15a5b288486d43652b6fc125ee51"
+      "url": "https://github.com/iAvoe/OneColumnEncoder/releases/download/Commit1049/1cenc-win-x64.7z",
+      "hash": "1e03041ff0b71b3f7e2b9deed216826ee055c36707637726a1b123a2cf51c790"
     },
     "32bit": {
-      "url": "https://github.com/iAvoe/OneColumnEncoder/releases/download/Commit1008/1cenc-win-x86.7z",
-      "hash": "1ea9d28e216f38c15c9a1b3ee0d2c0660d55eb1672c1d4a8470982009b805be7"
+      "url": "https://github.com/iAvoe/OneColumnEncoder/releases/download/Commit1049/1cenc-win-x86.7z",
+      "hash": "94b7b7fbd36fb64425a640a1188dd3155d69b4d3b6d39339afceb03a694c89e5"
     }
   },
   "bin": "OneColumnEncoder.exe",
@@ -28,7 +28,7 @@
   ],
   "notes": [
     "这是 Windows WPF 图形界面应用，不是命令行工具；安装后可从开始菜单或 Scoop shim 启动。",
-    "当前发布为上游 Commit1008。上游会在新提交产生后清理较旧的 Commit 发布，因此旧版本下载地址可能失效。",
+    "当前发布为上游 Commit1049。上游会在新提交产生后清理较旧的 Commit 发布，因此旧版本下载地址可能失效。",
     "64 位压缩包约 133 MiB，解压后还包含编码器和视觉质量工具；32 位构建的集成能力较弱，仅在需要时使用。",
     "软件将配置写入安装目录下的 1cenc 子目录，本 manifest 会持久化该目录；归档内的第三方组件仍受其各自许可证约束。"
   ],
