@@ -1,0 +1,26 @@
+{
+  "version": "0.23",
+  "description": "基于 Hypervisor 的 Windows 原生 ring-0 调试器（命令行界面）。",
+  "homepage": "https://hyperdbg.org",
+  "license": "GPL-3.0",
+  "url": "https://github.com/HyperDbg/HyperDbg/releases/download/v0.23/hyperdbg-v0.23.zip",
+  "hash": "7b80040913e2168eb531b58d7cebd37accf0a57b77a019f1eeefe9d1c9bd85bb",
+  "extract_dir": "release",
+  "bin": "hyperdbg-cli.exe",
+  "notes": [
+    "命令行调试器，安装后可用 hyperdbg-cli 启动；加载 ring-0 驱动（hyperkd.sys）需要管理员权限，请按官方 Quick Start（https://docs.hyperdbg.org/getting-started/quick-start）操作。",
+    "HyperDbg 的 MCP server（HyperDbg/mcp）是独立的早期项目，尚无正式发布，本包不包含。"
+  ],
+  "checkver": {
+    "github": "https://api.github.com/repos/HyperDbg/HyperDbg/releases",
+    "jsonpath": "$..tag_name",
+    "regex": "v(\\d+\\.\\d+)$"
+  },
+  "autoupdate": {
+    "url": "https://github.com/HyperDbg/HyperDbg/releases/download/v$version/hyperdbg-v$version.zip",
+    "hash": {
+      "mode": "github"
+    },
+    "extract_dir": "release"
+  }
+}
