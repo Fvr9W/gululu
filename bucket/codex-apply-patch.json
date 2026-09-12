@@ -1,5 +1,5 @@
 {
-  "version": "0.153.0",
+  "version": "0.154.0",
   "description": "来自 OpenAI Codex 代理补丁系统的独立 apply_patch 工具，由第三方维护者以可直接安装的二进制包形式发布。",
   "homepage": "https://github.com/BeautyyuYanli/codex-apply-patch",
   "license": "Apache-2.0",
@@ -10,8 +10,8 @@
   ],
   "architecture": {
     "64bit": {
-      "url": "https://github.com/BeautyyuYanli/codex-apply-patch/releases/download/rust-v0.153.0/apply-patch-rust-v0.153.0-x86_64-pc-windows-msvc.zip",
-      "hash": "69cd5b25daddb0a8fc30f91a2c773b641bbe7dc27bf5033ca5ca3938aa95a4eb",
+      "url": "https://github.com/BeautyyuYanli/codex-apply-patch/releases/download/rust-v0.154.0/apply-patch-rust-v0.154.0-x86_64-pc-windows-msvc.zip",
+      "hash": "74f8d4abcf7ebda0958973b59c013ff21b5ed5e63efc86243126a3d39eba484e",
       "extract_dir": "apply-patch"
     }
   },
