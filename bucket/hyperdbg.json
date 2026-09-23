@@ -1,10 +1,10 @@
 {
-  "version": "0.23",
+  "version": "0.24",
   "description": "基于 Hypervisor 的 Windows 原生 ring-0 调试器（命令行界面）。",
   "homepage": "https://hyperdbg.org",
   "license": "GPL-3.0",
-  "url": "https://github.com/HyperDbg/HyperDbg/releases/download/v0.23/hyperdbg-v0.23.zip",
-  "hash": "7b80040913e2168eb531b58d7cebd37accf0a57b77a019f1eeefe9d1c9bd85bb",
+  "url": "https://github.com/HyperDbg/HyperDbg/releases/download/v0.24/hyperdbg-v0.24.zip",
+  "hash": "602d3688009ced71e81ce37166696da868779ecc35f9b01ea5046323ba90f395",
   "extract_dir": "release",
   "bin": "hyperdbg-cli.exe",
   "notes": [
