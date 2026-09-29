@@ -1,0 +1,41 @@
+{
+  "version": "0.2.1",
+  "description": "DMA 内存分析框架，提供桌面界面和 MCP 工具。",
+  "homepage": "https://github.com/super2xl/orpheus",
+  "license": "GPL-3.0-or-later",
+  "architecture": {
+    "64bit": {
+      "url": [
+        "https://github.com/super2xl/orpheus/releases/download/v0.2.1/orpheus_0.2.1_x64-setup.exe#/orpheus-setup.exe",
+        "https://github.com/super2xl/orpheus/releases/download/v0.2.0/orpheus_core.dll"
+      ],
+      "hash": [
+        "9abe61c358619af0ee51e1f896430d00e46f727f6d6b454c4d8419ceee0ac232",
+        "60cc4bdb5c2756dd8d458862cb04c8ba46bf5a0538a1457616ace6f4eca316e9"
+      ]
+    }
+  },
+  "bin": [
+    ["app.exe", "orpheus"]
+  ],
+  "notes": "v0.2.1 安装包遗漏 orpheus_core.dll；此包附带 v0.2.0 release 中的 orpheus_core.dll。",
+  "checkver": {
+    "github": "https://api.github.com/repos/super2xl/orpheus/releases",
+    "jsonpath": "$..tag_name",
+    "regex": "v(\\d+\\.\\d+\\.\\d+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": [
+          "https://github.com/super2xl/orpheus/releases/download/v$version/orpheus_$version_x64-setup.exe#/orpheus-setup.exe",
+          "https://github.com/super2xl/orpheus/releases/download/v0.2.0/orpheus_core.dll"
+        ],
+        "hash": [
+          { "mode": "github" },
+          "60cc4bdb5c2756dd8d458862cb04c8ba46bf5a0538a1457616ace6f4eca316e9"
+        ]
+      }
+    }
+  }
+}
