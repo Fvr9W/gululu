@@ -1,28 +1,29 @@
 {
-  "version": "1.15.9",
+  "version": "1.15.10",
   "description": "独立的 CLIProxyAPI 用量追踪工具，使用 SQLite 持久化并提供内置仪表板。",
   "homepage": "https://github.com/Willxup/cpa-usage-keeper",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v1.15.9/cpa-usage-keeper_v1.15.9_windows_amd64.zip",
-      "hash": "d1ea11fcde5cd241cbd82b5ec2425ccd0a311bb7a6ca9f09a457f7b3691df3e1",
-      "extract_dir": "cpa-usage-keeper_v1.15.9_windows_amd64"
+      "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v1.15.10/cpa-usage-keeper_v1.15.10_windows_amd64.zip",
+      "hash": "c1a48b618e820e46a42f3670b6a680f57d74162230d8cc03f51c56323ba3bc56",
+      "extract_dir": "cpa-usage-keeper_v1.15.10_windows_amd64"
     },
     "arm64": {
-      "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v1.15.9/cpa-usage-keeper_v1.15.9_windows_arm64.zip",
-      "hash": "2c1310ee3a48485eae45c95fa0477e98471285bf6f7854035fbec06fb2cc23d9",
-      "extract_dir": "cpa-usage-keeper_v1.15.9_windows_arm64"
+      "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v1.15.10/cpa-usage-keeper_v1.15.10_windows_arm64.zip",
+      "hash": "a062c92e8dbde4bde2a69d6c50ae6c2c1d6b04412adad0691900bdeadb8aa048",
+      "extract_dir": "cpa-usage-keeper_v1.15.10_windows_arm64"
     }
   },
   "bin": "cpa-usage-keeper.exe",
+  "pre_install": "if (!(Test-Path \"$persist_dir\\.env\") -and !(Test-Path \"$dir\\.env\")) { $envPath = \"$dir\\.env\"; Copy-Item \"$dir\\.env.example\" $envPath; $content = [regex]::Replace([IO.File]::ReadAllText($envPath).Replace('AUTH_ENABLED=true', 'AUTH_ENABLED=false'), '(?m)^APP_HOST=\\r?$', 'APP_HOST=127.0.0.1'); [IO.File]::WriteAllText($envPath, $content, [Text.UTF8Encoding]::new($false)) }",
   "persist": [
     "data",
     ".env"
   ],
   "notes": [
-    "启动前请将 .env.example 复制为 .env，并设置 CPA_BASE_URL、CPA_MANAGEMENT_KEY 和私有 LOGIN_PASSWORD；默认启用身份验证。",
-    "持久化的 .env 文件包含 CPA 凭据和登录密码，请按机密信息保护；仅在隔离部署中使用 AUTH_ENABLED=false。",
+    "首次安装会生成仅监听本机的 .env：CPA_BASE_URL 默认为 http://127.0.0.1:8317，AUTH_ENABLED=false；请设置 CPA_MANAGEMENT_KEY。",
+    "持久化的 .env 包含 CPA 凭据；如需从其他设备访问，请设置 APP_HOST 并启用 AUTH_ENABLED、配置私有 LOGIN_PASSWORD。",
     "WORK_DIR 默认为 ./data，其中保存 app.db、日志和备份；此 manifest 会持久化 data 目录。",
     "SQLite 数据库和未加密备份可能包含原始 CPA 凭据数据，请限制安装目录和持久化数据目录的访问权限。"
   ],
