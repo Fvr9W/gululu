@@ -18,7 +18,10 @@
   "bin": [
     ["app.exe", "orpheus"]
   ],
-  "notes": "v0.2.1 安装包遗漏 orpheus_core.dll；此包附带 v0.2.0 release 中的 orpheus_core.dll。",
+  "installer": {
+    "script": "Expand-7zipArchive \"$dir\\orpheus-setup.exe\" -Removal"
+  },
+  "notes": "Scoop 不会自动解包 NSIS 安装包；安装阶段会从 v0.2.1 安装包提取 app.exe 供 shim 使用。v0.2.1 安装包遗漏 orpheus_core.dll；此包附带 v0.2.0 release 中的 orpheus_core.dll。",
   "checkver": {
     "github": "https://api.github.com/repos/super2xl/orpheus/releases",
     "jsonpath": "$..tag_name",
