@@ -1,14 +1,14 @@
 {
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Windows relay and web/TUI dashboard for herdr agents.",
   "homepage": "https://github.com/dcolinmorgan/herdr-remote",
   "license": {
     "identifier": "AGPL-3.0-or-later",
-    "url": "https://github.com/dcolinmorgan/herdr-remote/blob/v0.8.0/LICENSE"
+    "url": "https://github.com/dcolinmorgan/herdr-remote/blob/v0.8.1/LICENSE"
   },
-  "url": "https://github.com/dcolinmorgan/herdr-remote/archive/refs/tags/v0.8.0.zip",
-  "hash": "0649affaf9ba4b1705fb13bbbe80e80463017590acf80a4c25499e45bd36aab5",
-  "extract_dir": "herdr-remote-0.8.0",
+  "url": "https://github.com/dcolinmorgan/herdr-remote/archive/refs/tags/v0.8.1.zip",
+  "hash": "d7d685ee5a777751a571c7b51313468ca0a59e26cf3f131f5de19af64c989adf",
+  "extract_dir": "herdr-remote-0.8.1",
   "bin": [
     [
       "relay/start.ps1",
