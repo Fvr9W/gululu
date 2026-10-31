@@ -1,55 +1,55 @@
 {
-  "version": "2.0.2",
-  "description": "独立的 CLIProxyAPI 用量追踪工具，使用 SQLite 持久化并提供内置仪表板。",
-  "homepage": "https://github.com/Willxup/cpa-usage-keeper",
-  "license": "MIT",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v2.0.2/cpa-usage-keeper_v2.0.2_windows_amd64.zip",
-      "hash": "9a43ecbde0a28a0df160f4b48c754878982d6188a036146878a82d6ba5ed681d",
-      "extract_dir": "cpa-usage-keeper_v2.0.2_windows_amd64"
-    },
-    "arm64": {
-      "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v2.0.2/cpa-usage-keeper_v2.0.2_windows_arm64.zip",
-      "hash": "d5083c8b3f45397a158f31f7c78ed856cb5a7bab256c52045af91ab8163e2539",
-      "extract_dir": "cpa-usage-keeper_v2.0.2_windows_arm64"
-    }
-  },
-  "bin": "cpa-usage-keeper.exe",
-  "pre_install": "if (!(Test-Path \"$persist_dir\\.env\") -and !(Test-Path \"$dir\\.env\")) { $envPath = \"$dir\\.env\"; Copy-Item \"$dir\\.env.example\" $envPath; $content = [regex]::Replace([IO.File]::ReadAllText($envPath).Replace('AUTH_ENABLED=true', 'AUTH_ENABLED=false'), '(?m)^APP_HOST=\\r?$', 'APP_HOST=127.0.0.1'); [IO.File]::WriteAllText($envPath, $content, [Text.UTF8Encoding]::new($false)) }",
-  "persist": [
-    "data",
-    ".env"
-  ],
-  "notes": [
-    "首次安装会生成仅监听本机的 .env：CPA_BASE_URL 默认为 http://127.0.0.1:8317，AUTH_ENABLED=false；请设置 CPA_MANAGEMENT_KEY。",
-    "持久化的 .env 包含 CPA 凭据；如需从其他设备访问，请设置 APP_HOST 并启用 AUTH_ENABLED、配置私有 LOGIN_PASSWORD。",
-    "WORK_DIR 默认为 ./data，其中保存 app.db、日志和备份；此 manifest 会持久化 data 目录。",
-    "SQLite 数据库和未加密备份可能包含原始 CPA 凭据数据，请限制安装目录和持久化数据目录的访问权限。"
-  ],
-  "checkver": {
-    "github": "https://api.github.com/repos/Willxup/cpa-usage-keeper/releases",
-    "jsonpath": "$..tag_name",
-    "regex": "v(\\d+\\.\\d+\\.\\d+)"
-  },
-  "autoupdate": {
+    "version": "2.0.3",
+    "description": "独立的 CLIProxyAPI 用量追踪工具，使用 SQLite 持久化并提供内置仪表板。",
+    "homepage": "https://github.com/Willxup/cpa-usage-keeper",
+    "license": "MIT",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v$version/cpa-usage-keeper_v$version_windows_amd64.zip",
-        "hash": {
-          "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v$version/checksums.txt",
-          "regex": "([0-9a-fA-F]{64})\\s+cpa-usage-keeper_v$version_windows_amd64\\.zip"
+        "64bit": {
+            "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v2.0.3/cpa-usage-keeper_v2.0.3_windows_amd64.zip",
+            "hash": "384d4814a3db55130b52e9a96f1a31dd9ee62c82339e8e01909e2715dfb44943",
+            "extract_dir": "cpa-usage-keeper_v2.0.3_windows_amd64"
         },
-        "extract_dir": "cpa-usage-keeper_v$version_windows_amd64"
-      },
-      "arm64": {
-        "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v$version/cpa-usage-keeper_v$version_windows_arm64.zip",
-        "hash": {
-          "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v$version/checksums.txt",
-          "regex": "([0-9a-fA-F]{64})\\s+cpa-usage-keeper_v$version_windows_arm64\\.zip"
-        },
-        "extract_dir": "cpa-usage-keeper_v$version_windows_arm64"
-      }
+        "arm64": {
+            "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v2.0.3/cpa-usage-keeper_v2.0.3_windows_arm64.zip",
+            "hash": "3ded28b86dc7144061ffec68f8abda6afa1fc5facf5f0ad178c3ecd4d1308184",
+            "extract_dir": "cpa-usage-keeper_v2.0.3_windows_arm64"
+        }
+    },
+    "bin": "cpa-usage-keeper.exe",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\.env\") -and !(Test-Path \"$dir\\.env\")) { $envPath = \"$dir\\.env\"; Copy-Item \"$dir\\.env.example\" $envPath; $content = [regex]::Replace([IO.File]::ReadAllText($envPath).Replace('AUTH_ENABLED=true', 'AUTH_ENABLED=false'), '(?m)^APP_HOST=\\r?$', 'APP_HOST=127.0.0.1'); [IO.File]::WriteAllText($envPath, $content, [Text.UTF8Encoding]::new($false)) }",
+    "persist": [
+        "data",
+        ".env"
+    ],
+    "notes": [
+        "首次安装会生成仅监听本机的 .env：CPA_BASE_URL 默认为 http://127.0.0.1:8317，AUTH_ENABLED=false；请设置 CPA_MANAGEMENT_KEY。",
+        "持久化的 .env 包含 CPA 凭据；如需从其他设备访问，请设置 APP_HOST 并启用 AUTH_ENABLED、配置私有 LOGIN_PASSWORD。",
+        "WORK_DIR 默认为 ./data，其中保存 app.db、日志和备份；此 manifest 会持久化 data 目录。",
+        "SQLite 数据库和未加密备份可能包含原始 CPA 凭据数据，请限制安装目录和持久化数据目录的访问权限。"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Willxup/cpa-usage-keeper/releases",
+        "jsonpath": "$..tag_name",
+        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v$version/cpa-usage-keeper_v$version_windows_amd64.zip",
+                "hash": {
+                    "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v$version/checksums.txt",
+                    "regex": "([0-9a-fA-F]{64})\\s+cpa-usage-keeper_v$version_windows_amd64\\.zip"
+                },
+                "extract_dir": "cpa-usage-keeper_v$version_windows_amd64"
+            },
+            "arm64": {
+                "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v$version/cpa-usage-keeper_v$version_windows_arm64.zip",
+                "hash": {
+                    "url": "https://github.com/Willxup/cpa-usage-keeper/releases/download/v$version/checksums.txt",
+                    "regex": "([0-9a-fA-F]{64})\\s+cpa-usage-keeper_v$version_windows_arm64\\.zip"
+                },
+                "extract_dir": "cpa-usage-keeper_v$version_windows_arm64"
+            }
+        }
     }
-  }
 }
