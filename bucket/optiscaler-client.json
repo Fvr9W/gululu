@@ -1,28 +1,28 @@
 {
-    "version": "1.0.7.2",
-    "description": "OptiScaler 模组的游戏库安装与管理客户端。",
-    "homepage": "https://github.com/Optiscaler-Client/Optiscaler-Client",
-    "license": "GPL-3.0-or-later",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/Optiscaler-Client/Optiscaler-Client/releases/download/OptiscalerClient-1.0.7.2/OptiscalerClient-1.0.7.2-win-x64.zip",
-            "hash": "d14b1a825391ab89035b187743e10c7bedbaef000de249236cc691968f304ee4"
-        }
-    },
-    "bin": "OptiscalerClient.exe",
-    "checkver": {
-        "github": "https://api.github.com/repos/Optiscaler-Client/Optiscaler-Client/releases",
-        "jsonpath": "$..tag_name",
-        "regex": "OptiscalerClient-(\\d+\\.\\d+\\.\\d+\\.\\d+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Optiscaler-Client/Optiscaler-Client/releases/download/OptiscalerClient-$version/OptiscalerClient-$version-win-x64.zip",
-                "hash": {
-                    "mode": "github"
-                }
-            }
-        }
+  "version": "1.0.8",
+  "description": "OptiScaler 模组的游戏库安装与管理客户端。",
+  "homepage": "https://github.com/Optiscaler-Client/Optiscaler-Client",
+  "license": "GPL-3.0-or-later",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/Optiscaler-Client/Optiscaler-Client/releases/download/OptiscalerClient-1.0.8/OptiscalerClient-1.0.8-win-x64.zip",
+      "hash": "fb5bc5a3c98ec96f838545c96521cb8b62efede28d9130813497575b46ba3500"
     }
+  },
+  "bin": "OptiscalerClient.exe",
+  "checkver": {
+    "github": "https://api.github.com/repos/Optiscaler-Client/Optiscaler-Client/releases",
+    "jsonpath": "$..tag_name",
+    "regex": "OptiscalerClient-(\\d+\\.\\d+\\.\\d+\\.\\d+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/Optiscaler-Client/Optiscaler-Client/releases/download/OptiscalerClient-$version/OptiscalerClient-$version-win-x64.zip",
+        "hash": {
+          "mode": "github"
+        }
+      }
+    }
+  }
 }
