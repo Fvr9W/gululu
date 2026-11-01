@@ -13,7 +13,7 @@
   "checkver": {
     "github": "https://api.github.com/repos/Optiscaler-Client/Optiscaler-Client/releases",
     "jsonpath": "$..tag_name",
-    "regex": "OptiscalerClient-(\\d+\\.\\d+\\.\\d+\\.\\d+)"
+    "regex": "OptiscalerClient-(\\d+\\.\\d+\\.\\d+(?:\\.\\d+)?)"
   },
   "autoupdate": {
     "architecture": {
