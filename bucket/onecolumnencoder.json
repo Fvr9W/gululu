@@ -1,16 +1,16 @@
 {
-    "version": "2.20.29",
+    "version": "2.22.31",
     "description": "OneColumnEncoder 视频编码工具，提供 AVC、HEVC 和 AV1 的 Windows 图形界面编码工作流。",
     "homepage": "https://github.com/iAvoe/OneColumnEncoder",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/iAvoe/OneColumnEncoder/releases/download/v2.20.29/1cenc-v2.20.29-win-x64.7z",
-            "hash": "524b9a0ef738281cdab25b0fecf65b7565a7f92d3b07d6646967366192d5afc7"
+            "url": "https://github.com/iAvoe/OneColumnEncoder/releases/download/v2.22.31/1cenc-v2.22.31-win-x64.7z",
+            "hash": "7680f92903cbf30c87fde68b777f1544f2dec758a9aae763cfb4059e1ec6f403"
         },
         "32bit": {
-            "url": "https://github.com/iAvoe/OneColumnEncoder/releases/download/v2.20.29/1cenc-v2.20.29-win-x86.7z",
-            "hash": "d1129a00d51b8e2daa5073b220d1f941cd9d0c4fc49bb42d5311c15307b90fec"
+            "url": "https://github.com/iAvoe/OneColumnEncoder/releases/download/v2.22.31/1cenc-v2.22.31-win-x86.7z",
+            "hash": "18fa26221f49ec77ad40e3df99d8623b56cf45ab31d7eace8e1ec105c0df3488"
         }
     },
     "bin": "OneColumnEncoder.exe",
